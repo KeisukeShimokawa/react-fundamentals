@@ -23,14 +23,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
-    <div id="root"></div>
     <script type="module">
-      const rootElement = document.getElementById('#root');
-      const divElement = document.createElement('div');
+      const rootElement = document.createElement('div');
+      rootElement.id = 'root';
 
+      const divElement = document.createElement('div');
       divElement.className = 'container';
       divElement.append('Hello World');
+
       rootElement.append(divElement);
+      document.body.append(rootElement);
     </script>
   </body>
 </html>
